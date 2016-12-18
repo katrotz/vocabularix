@@ -1,0 +1,35 @@
+{
+  "name": "vocabularix",
+  "version": "0.1.0",
+  "description": "Vocabulary generator based on a parsed text in foreign language",
+  "bin": "bin/vocabularix.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katrotz/vocabularix.git"
+  },
+  "keywords": [
+    "vacabulary",
+    "generator"
+  ],
+  "author": "Vyacheslav Cotruta <katrotz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katrotz/vocabularix/issues"
+  },
+  "homepage": "https://github.com/katrotz/vocabularix#readme",
+  "dependencies": {
+    "csv": "^1.1.0",
+    "lodash": "^4.16.4",
+    "minimist": "^1.2.0",
+    "mysql": "github:mysqljs/mysql",
+    "natural": "^0.4.0",
+    "progress": "^1.1.8",
+    "rethinkdb": "^2.3.3",
+    "snowball-german": "^1.0.0",
+    "winston": "^2.3.0"
+  }
+}
