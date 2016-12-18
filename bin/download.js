@@ -209,9 +209,9 @@ function createTable(tableName, cb) {
     const createQuery = 'CREATE TABLE `'+ tableName + '`'
         + ' (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,'
         + ' `ngram` varchar(255) NOT NULL,'
-        + ' `year` varchar(255) NOT NULL,'
-        + ' `match_count` varchar(255) NOT NULL,'
-        + ' `volume_count` varchar(255) NOT NULL,'
+        + ' `year` int(11) NOT NULL,'
+        + ' `match_count` int(11) NOT NULL,'
+        + ' `volume_count` int(11) NOT NULL,'
         + ' PRIMARY KEY (`id`)'
         + ')'
         + ' ENGINE=InnoDB DEFAULT CHARSET=utf8;';
