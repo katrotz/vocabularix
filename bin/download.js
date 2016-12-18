@@ -70,7 +70,6 @@ function processUrlCallback(err) {
 
     if (nGramCurrentIndex < nGramMaxIndex && contents[nGramCurrentIndex + 1]) {
         nGramCurrentIndex += 1;
-        winston.info('\n');
         try {
             processUrl(contents[nGramCurrentIndex], processUrlCallback);
         } catch (e) {
@@ -132,7 +131,7 @@ function download(url, tblName, cb) {
         const progressBar = new ProgressBar('[:bar] :percent Elapsed :elapsed Processed :processedRecordsCount', {
             width: 60,
             total: contentLength,
-            clear: true
+            // clear: true
         });
 
         const transformJson = record => {
@@ -223,10 +222,10 @@ function createTable(tableName, cb) {
         return cb();
     }
 
-    connection.query(dropQuery, function(err) {
-        if (err) {
-            return cb(err);
-        }
+    // connection.query(dropQuery, function(err) {
+    //     if (err) {
+    //         return cb(err);
+    //     }
 
         connection.query(createQuery, function (err, results, fields) {
             if (err) {
@@ -235,5 +234,5 @@ function createTable(tableName, cb) {
 
             return cb(err);
         });
-    });
+    // });
 }
